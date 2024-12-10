@@ -110,7 +110,7 @@ void display()
 	glRotatef(-15, 1, 0, 0);
 	glRotatef(zRot, 0, 1, 0);
 	glRotatef(xRot, 0, 0, 1);
-	zRot += 5;
+	zRot += 2;
 
 	glPointSize(15.0f);
 	glBegin(GL_QUADS);
@@ -121,6 +121,8 @@ void display()
 
 	//glVertex3fv(obj->getFaceVerties(1).data());
 
+	glScalef(2.5f, 2.5f, 2.5f);
+	//glScalef(5.5f, 5.5f, 5.5f);
 	for (auto faceVertexIndex : obj->faceData) {
 		glBegin(GL_LINE_LOOP);
 		glColor3f(1.0f, 0.0f, 0.0f);
